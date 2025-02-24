@@ -14,7 +14,8 @@ class Login extends Component
     public function authenticate() {
         $this->validate();
         if(auth()->attempt(['email' => $this->email, 'password' => $this->password])) {
-            return redirect()->route('landing');
+            session()->regenerate();
+            return redirect()->route('dashboard');
         }
         $this->addError('login', 'The provided credentials do not match our records.');
     }

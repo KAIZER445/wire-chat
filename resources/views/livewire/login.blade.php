@@ -11,7 +11,7 @@
         @enderror
         <label for="password">password:</label><br>
         <input type="text" wire:model="password"><br>
-        @error('login')
+        @error('')
         <p style="color: red;">{{ $message }}</p>
         @enderror
         <button type="submit">Login</button>
