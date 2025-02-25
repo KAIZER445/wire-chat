@@ -5,13 +5,13 @@
         <p style="color: red;">{{ $message }}</p>
         @enderror
         <label for="email">email:</label><br>
-        <input type="text" wire:model="email"><br>
+        <input type="text" class="form-control" wire:model="email"><br>
         @error('password')
         <p style="color: red;">{{ $message }}</p>
         @enderror
         <label for="password">password:</label><br>
-        <input type="text" wire:model="password"><br>
-        @error('')
+        <input type="text" class="form-control" wire:model="password"><br>
+        @error('login')
         <p style="color: red;">{{ $message }}</p>
         @enderror
         <button type="submit">Login</button>

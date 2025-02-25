@@ -11,8 +11,7 @@ class ChatConnections extends Component
     public $users;
     public function mount()
     {
-        // $this->users = User::where('id', '!=', Auth::id())->get();
-        $this->users = User::all();
+        $this->users = User::where('id', '!=', Auth::id())->get();
     }
 
     public function startChat($id)
